@@ -29,3 +29,31 @@ function fairRations(B) {
 const B = [4, 5, 6, 7, 3, 5, 7, 2, 3, 4, 5, 7, 8, 1, 2, 4, 4, 1, 1];
 
 console.log(fairRations(B));
+
+
+
+
+-- -- -
+import {
+    RegistryElement
+} from "@web-component-ecom-registry/registry-element";
+
+import RegistryListController from './crossBrandRegistryList';
+
+class MobileRegistryListController extends RegistryListController {
+    get mobileRac() {
+        if (typeof this._mobileRac === "undefined") {
+            this._mobileRac = wsgc.js.mobile.AddToCartConfirmation;
+        }
+
+        return this._mobileRac;
+    }
+
+    _onAddToCartSuccess(response) {
+        this.mobileRac.openOverlay(response);
+    }
+}
+
+RegistryElement.define("mobile-registry-list-controller", MobileRegistryListController);
+
+export default MobileRegistryListController;
