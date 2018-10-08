@@ -1,8 +1,5 @@
 /**
+ * contains solved problems.
  * 
- */
-/**
- * @author hpatel
- *
  */
 package problems;
