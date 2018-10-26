@@ -1,4 +1,4 @@
-//coun't figure out the logic in Aug 18, try later
+//couldn't figure out the logic on Aug 18, try later
 
 function appendAndDelete(s, t, k) {
     let answer = "Yes";
