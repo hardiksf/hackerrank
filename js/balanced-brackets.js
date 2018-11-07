@@ -1,3 +1,4 @@
+//Balanced brackets
 function isBalanced(s) {
     let length = -1;
     while (s.length !== length) {

@@ -1,11 +1,14 @@
 //Test case # 15 failed due to timeout
-function flatlandSpaceStations2(n, c) {
-    const minDistanceFromEachCity = [];
+function flatlandSpaceStations(n, c) {
+    let maxDistanceFromEachCity = 0;
     for (let i = 0; i < n; i++) {
         const distanceArray = c.map(element => Math.abs(element - i));
-        minDistanceFromEachCity.push(Math.min(...distanceArray));
+        let minDistanceFromEachCity = Math.min(...distanceArray);
+        if (minDistanceFromEachCity > maxDistanceFromEachCity) {
+            maxDistanceFromEachCity = minDistanceFromEachCity;
+        }
     }
-    return Math.max(...minDistanceFromEachCity);
+    return maxDistanceFromEachCity;;
 }
 
 

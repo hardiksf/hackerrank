@@ -11,15 +11,19 @@ function encryption(s) {
     }
 
     let result = ``;
-    for (let index = 0; index < rows; index = index + columns) {
-        if (index % rows === 0) {
-            result = result + stringWithoutSpaces.charAt(index) + ` `;
-        } else {
+    let counter = 0;
+
+    for (let j = 0; j < columns; j++) {
+        if (j !== 0) {
+            result = result + ` `;
+        }
+        for (let index = j; index < stringWithoutSpaces.length; index = index + columns) {
             result = result + stringWithoutSpaces.charAt(index);
+            counter = counter + 1;
         }
     }
-
     console.log(result);
 }
-const s = "haveaniceday";
+const s = "feed thed og";
+//fto ehg ee dd
 encryption(s);
