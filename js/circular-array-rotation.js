@@ -1,25 +1,32 @@
 function circularArrayRotation(a, k, queries) {
-    if (k % a.length !== 0) {
-        if (a.length < k) {
-            k = k % a.length;
+    const aLength = a.length;
+    k = k % aLength;
+    const rotatedArray = [];
+    if (k !== a.length) {
+        for (let i = 0; i < aLength; i++) {
+            const elementIndexToBePushed = aLength - k + i;
+            if (elementIndexToBePushed > a.length - 1) {
+                rotatedArray.push(a[elementIndexToBePushed - aLength]);
+            } else {
+                rotatedArray.push(a[elementIndexToBePushed]);
+            }
         }
-    }
-    for (let index = 0; index < queries.length; index++) {
-        if (index + k > a.length - 1) {
-
-            console.log(a[index + k - a.length]);
-        } else {
-            console.log(a[index + k]);
-        }
-
+    } else {
+        rotatedArray = a;
     }
 
+    const result = [];
+    const queriesLength = queries.length;
+    for (let i = 0; i < queriesLength; i++) {
+        result.push(rotatedArray[queries[i]]);
+    }
+    return result;
 }
 
 let a = [3, 4, 5];
-// 4, 5, 3
 // 5, 3, 4
-let k = 2;
+//4, 5, 3
+let k = 40;
 let queries = [1, 2];
 
 circularArrayRotation(a, k, queries);
