@@ -1,7 +1,4 @@
-//Testcase 2 is failing
-
 function happyLadybugs(b) {
-
     let result = `YES`;
 
     //if not at least two of each - NO
@@ -24,23 +21,19 @@ function happyLadybugs(b) {
             result = `NO`;
             break;
         }
-
     }
 
     //If does not include _ and not next to each other - NO
     if (!b.includes(`_`)) {
         for (let index = 1; index < b.length - 1; index++) {
-            if (b[index] !== b[index - 1] || b[index] !== b[index + 1])
+            if (b[index] !== b[index - 1] && b[index] !== b[index + 1]) {
                 result = `NO`;
-            break;
+                break;
+            }
         }
-
     }
     return result;
-
 }
 
-
-
-const b = `_`;
+const b = `AABCBC`;
 console.log(happyLadybugs(b));
