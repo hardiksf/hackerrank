@@ -4,7 +4,7 @@ function closestNumbers(arr) {
 
     arr.sort((a, b) => a - b);
 
-    let result = [];
+    const result = [];
 
     for (let index = 1; index < arr.length; index++) {
         if ((arr[index] - arr[index - 1]) < minDifference) {

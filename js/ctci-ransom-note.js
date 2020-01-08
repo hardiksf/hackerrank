@@ -1,5 +1,5 @@
 function prepareMap(string) {
-    const wordsInString = string.toString().split(" ");
+    const wordsInString = string.toString().split(' ');
     const map = new Map();
 
     for (let index = 0; index < wordsInString.length; index++) {
@@ -15,35 +15,35 @@ function prepareMap(string) {
 }
 
 function checkMagazine(magazine, note) {
-    let result = "YES";
+    let result = 'YES';
     const magazineMap = prepareMap(magazine);
     const noteMap = prepareMap(note);
 
-    for (let [key, value] of noteMap) {
+    for (const [key, value] of noteMap) {
         if (magazineMap.get(key) === undefined) {
-            result = "NO";
+            result = 'NO';
             break;
         } else {
             if (value > magazineMap.get(key)) {
-                result = "NO";
+                result = 'NO';
                 break;
             }
         }
     }
 
-    if (result === "YES") {
-        return "Yes";
+    if (result === 'YES') {
+        return 'Yes';
     } else {
-        return "No";
+        return 'No';
     }
 }
 
 const conceptCodeToNameMap = new Map();
-conceptCodeToNameMap.set("WS", "Williams Sonoma")
-    .set("WE", "West Elm")
-    .set("PB", "Pottery Barn")
-    .set("PK", "Pottery Barn Kids");
+conceptCodeToNameMap.set('WS', 'Williams Sonoma')
+    .set('WE', 'West Elm')
+    .set('PB', 'Pottery Barn')
+    .set('PK', 'Pottery Barn Kids');
 
-const magazine = "give me one grand today night";
-const note = "give one grand today";
+const magazine = 'give me one grand today night';
+const note = 'give one grand today';
 console.log(checkMagazine(magazine, note));

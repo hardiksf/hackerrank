@@ -21,7 +21,9 @@ function beautifulPairs(A, B) {
 const A = [1, 2, 3];
 const B = [1, 2, 3, 4];
 
-// 3 5 7 11 5 8
-// 5 7 11 10 5 8
+/*
+ * 3 5 7 11 5 8
+ * 5 7 11 10 5 8
+ */
 
 console.log(beautifulPairs(A, B));

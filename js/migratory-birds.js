@@ -1,5 +1,5 @@
 function migratoryBirds(ar) {
-    let myMap = new Map;
+    const myMap = new Map;
     for (const iterator of ar) {
         if (myMap.has(iterator)) {
             myMap.set(iterator, myMap.get(iterator) + 1);
@@ -8,7 +8,7 @@ function migratoryBirds(ar) {
         }
     }
     let maxOccurance = 0;
-    let numbersWithMaxOccurance = [];
+    const numbersWithMaxOccurance = [];
     console.log(myMap);
     for (const [key, value] of myMap) {
         if (value > maxOccurance) {
@@ -22,9 +22,6 @@ function migratoryBirds(ar) {
     }
     return Math.min(...numbersWithMaxOccurance);
 }
-
-
-
 
 // const myArray = [5, 4, 4, 1, 5, 3, 1];
 const myArray = [1, 4, 4, 4, 5, 3];

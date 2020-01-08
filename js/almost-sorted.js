@@ -17,8 +17,7 @@ function almostSorted(arr) {
     ) {
         console.log(`yes`);
         console.log(`swap ${indexOfNonSortedElements[0] + 1} ${indexOfNonSortedElements[0] + 2}`);
-    }
-    else if (nonSortedElementsLength > 1) {
+    } else if (nonSortedElementsLength > 1) {
         nonSortedElements.reverse();
         let modifiedArray = [];
         for (let i = 0; i < indexOfNonSortedElements[0]; i++) {
@@ -41,8 +40,7 @@ function almostSorted(arr) {
                 console.log(`reverse ${indexOfNonSortedElements[0] + 1} ${indexOfNonSortedElements[nonSortedElementsLength - 1] + 2}`);
             }
         }
-    }
-    else {
+    } else {
         console.log(`no`);
     }
     console.log(`nonSortedElements`, nonSortedElements);

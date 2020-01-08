@@ -10,7 +10,7 @@ function makeAnagram(a, b) {
         const currentCharacter = aArray[index];
         if (aMap.has(currentCharacter)) {
             let valueOfCurrentCharacter = aMap.get(currentCharacter);
-            aMap.set(currentCharacter, valueOfCurrentCharacter += 1)
+            aMap.set(currentCharacter, valueOfCurrentCharacter += 1);
         } else {
             aMap.set(currentCharacter, 1);
         }
@@ -37,6 +37,6 @@ function makeAnagram(a, b) {
 
     return aLength + bLength - 2 * numberOfCommonCharactersInBoth;
 }
-const a = "abcaa";
-const b = "abcd";
+const a = 'abcaa';
+const b = 'abcd';
 makeAnagram(a, b);

@@ -4,7 +4,7 @@ function howManyGames(p, d, m, s) {
     while (s >= p) {
         result = result + 1;
         s = s - p;
-        p = Math.max(p - d, m)
+        p = Math.max(p - d, m);
     }
     return result;
 

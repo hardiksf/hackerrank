@@ -2,7 +2,7 @@
 
 function extraLongFactorials(n) {
     var nString = n.toString();
-    var result = "";
+    var result = '';
     n = n - 1;
 
     var calc = 0;
@@ -13,11 +13,11 @@ function extraLongFactorials(n) {
             console.log(`calc`, calc);
             calc = calc.toString();
             i != 0 ? result = calc[calc.length - 1] + result : result = calc + result;
-            calc > 9 ? rest = calc.slice(0, calc.length - 1) : rest = "0";
+            calc > 9 ? rest = calc.slice(0, calc.length - 1) : rest = '0';
             rest = parseInt(rest);
         }
         nString = result;
-        result = "";
+        result = '';
         rest = 0;
         n--;
     }

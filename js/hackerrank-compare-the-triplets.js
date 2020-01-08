@@ -1,6 +1,6 @@
 // Complete the compareTriplets function below.
 function compareTriplets(a, b) {
-    let result = [];
+    const result = [];
     let scoreAlice = 0;
     let scoreBob = 0;
 

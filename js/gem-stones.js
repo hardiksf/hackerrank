@@ -8,5 +8,5 @@ function gemstones(arr) {
     return counter;
 }
 
-arr = ["abcdde", "baccd", "eeabg"];
+arr = ['abcdde', 'baccd', 'eeabg'];
 gemstones(arr);

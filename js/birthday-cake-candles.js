@@ -6,8 +6,5 @@ function birthdayCakeCandles(ar) {
 
 }
 
-
-
-
-let myArray = [1, 5, 6, 7];
+const myArray = [1, 5, 6, 7];
 console.log(birthdayCakeCandles(myArray));

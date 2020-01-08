@@ -1,23 +1,25 @@
-//This solution will work not work for cases like this:
+// This solution will work not work for cases like this:
 const G3 = [
     '123412',
     '561212',
-    '123634'
+    '123634',
 ];
 const P3 = ['12', '34'];
 
-// if P[0] occurs more than once in G, this will give the index (row, column) in G for all matches
-// this method will give result like this for above array (G3, P3)
-// { 0 => [ 0, 4 ], 1 => [ 2, 4 ], 2 => [ 0 ] }
+/*
+ * if P[0] occurs more than once in G, this will give the index (row, column) in G for all matches
+ * this method will give result like this for above array (G3, P3)
+ * { 0 => [ 0, 4 ], 1 => [ 2, 4 ], 2 => [ 0 ] }
+ */
 const getMapOfAllP0Matches = (G, P) => {
     const gLength = G.length;
     const pLength = P.length;
-    let numberOfMatches = 0;
+    const numberOfMatches = 0;
     const mapOfAllP0Matches = new Map();
 
     let fromIndex = 0;
     for (let i = 0; i < gLength;) {
-        let indexOfP0InG = G[i].indexOf(P[0], fromIndex);
+        const indexOfP0InG = G[i].indexOf(P[0], fromIndex);
 
         if (fromIndex > 0 && indexOfP0InG !== -1) {
             const arrayOfCurrentIndex = mapOfAllP0Matches.get(i);
@@ -30,16 +32,16 @@ const getMapOfAllP0Matches = (G, P) => {
         }
         const previousFromIndex = fromIndex;
         if (mapOfAllP0Matches.has(i)) {
-            let numberOfP0MatchesInCurrentRowInG = mapOfAllP0Matches.get(i).length;
+            const numberOfP0MatchesInCurrentRowInG = mapOfAllP0Matches.get(i).length;
             // fromIndex = mapOfAllP0Matches.get(i)[numberOfP0MatchesInCurrentRowInG - 1] + pLength;
             fromIndex++;
             if (fromIndex >= G[0].length || previousFromIndex === fromIndex) {
                 fromIndex = 0;
-                i++
+                i++;
             }
         } else {
             fromIndex = 0;
-            i++
+            i++;
         }
     }
     return mapOfAllP0Matches;
@@ -89,9 +91,9 @@ const doesAtLeastOneMatch = (G, P) => {
 function gridSearch(G, P) {
     const result = doesAtLeastOneMatch(G, P);
     if (result) {
-        return "YES";
+        return 'YES';
     } else {
-        return "NO";
+        return 'NO';
     }
 }
 
@@ -104,7 +106,7 @@ const G = ['7283455864',
     '6473530293',
     '7053106601',
     '0834282956',
-    '4607924137'
+    '4607924137',
 ];
 const P = ['9505', '3845', '3530'];
 
@@ -112,26 +114,25 @@ const G2 = ['88812',
     '38845',
     '68878',
     '98888',
-    '88888'
+    '88888',
 ];
 
 const P2 = ['123',
     '456',
-    '789'
+    '789',
 ];
-//result of 2 == NO
-
+// result of 2 == NO
 
 const G14 = [
     '456712',
     '561245',
     '123667',
-    '781288'
+    '781288',
 ];
 
 const P14 = [
     '45',
-    '67'
+    '67',
 ];
 
 const G2Sample = ['400453592126560',
@@ -148,7 +149,7 @@ const G2Sample = ['400453592126560',
     '962410809534811',
     '445893523733475',
     '768705303214174',
-    '650629270887160'
+    '650629270887160',
 ];
 const P2Sample = ['99', '99'];
 
@@ -159,14 +160,14 @@ const G15 = [
     '111111011111111',
     '111111111111111',
     '111111111111111',
-    '101010101010101'
+    '101010101010101',
 ];
 
 const P15 = [
     '11111',
     '11111',
     '11111',
-    '11110'
+    '11110',
 ];
 
 console.log(gridSearch(G15, P15));

@@ -7,7 +7,7 @@ function workbook(n, k, arr) {
         const totalPagesOfThisChapter = Math.ceil(arr[i] / k);
         let numberOfProblemsOnLastPageHere = arr[i] % k;
 
-        //when total problems is factor or k, there are k problems in last page
+        // when total problems is factor or k, there are k problems in last page
         if (numberOfProblemsOnLastPageHere === 0) {
             numberOfProblemsOnLastPageHere = k;
         }
@@ -26,7 +26,7 @@ function workbook(n, k, arr) {
                 }
             }
 
-            //calculate special problems here
+            // calculate special problems here
             if (firstProblemNumberOnThisPage <= pageNumber && lastProblemNUmberOnThisPage >= pageNumber) {
                 totalSpecialProblems++;
             }

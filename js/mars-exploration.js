@@ -7,10 +7,10 @@ function marsExploration(s) {
                 counter = counter + 1;
             }
         } else {
-            s.charAt(index) !== 'S') {
-            counter = counter + 1;
+            if (s.charAt(index) !== 'S') {
+                counter = counter + 1;
+            }
         }
     }
-}
-return counter;
+    return counter;
 }

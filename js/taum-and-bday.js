@@ -1,6 +1,8 @@
-//two test cases failed in both solutions
-//because javascript rounds number longer than 16 digits. So result with longer than 16 digits is being rounded. 
-//using library like big decimal should solve this issue.
+/*
+ * two test cases failed in both solutions
+ * because javascript rounds number longer than 16 digits. So result with longer than 16 digits is being rounded. 
+ * using library like big decimal should solve this issue.
+ */
 
 function taumBday1(b, w, bc, wc, z) {
     if (bc > wc) {
@@ -23,7 +25,6 @@ const wc = 8651519;
 const z = 821801924;
 
 console.log(taumBday1(b, w, bc, wc, z));
-
 
 function taumBday2(b, w, bc, wc, z) {
 

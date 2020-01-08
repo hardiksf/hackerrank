@@ -6,7 +6,6 @@ function plusMinus(arr) {
     const totalMinusElements = mimunArray.length;
     const totalZeroElements = length - totalPlusElements - totalMinusElements;
 
-
     console.log(totalPlusElements / length);
     console.log(totalMinusElements / length);
     console.log(totalZeroElements / length);

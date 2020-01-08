@@ -24,15 +24,14 @@ function roadsAndLibraries(n, c_lib, c_road, cities) {
         return numberOfRoads * c_road + numberOfLibraries + c_lib;
     }
 
-
 }
 
-const n = 5
+const n = 5;
 const c_lib = 6;
 const c_road = 1;
 const cities = [
     [1, 2],
     [1, 3],
-    [1, 4]
+    [1, 4],
 ];
 console.log(roadsAndLibraries(n, c_lib, c_road, cities));

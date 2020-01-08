@@ -2,7 +2,7 @@ function connectedCell(matrix) {
     const rows = matrix.length;
     const columns = matrix[0].length;
 
-    //Adding 0s to right, left, top and bottom so that boundary condition does not need to be checked and neighbors can be checked conveniently
+    // Adding 0s to right, left, top and bottom so that boundary condition does not need to be checked and neighbors can be checked conveniently
     for (let i = 0; i < rows; i++) {
         matrix[i].push(0);
         matrix[i].unshift(0);
@@ -21,9 +21,9 @@ function connectedCell(matrix) {
         return [
             [row - 1, column - 1], [row - 1, column], [row - 1, column + 1],
             [row, column - 1], [row, column + 1],
-            [row + 1, column - 1], [row + 1, column], [row + 1, column + 1]
+            [row + 1, column - 1], [row + 1, column], [row + 1, column + 1],
         ];
-    }
+    };
 
     const myFn = (count, r, c) => {
         if (matrix[r][c] === 0) {
@@ -43,17 +43,15 @@ function connectedCell(matrix) {
 
     };
 
-
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < columns; j++) {
-            let count = 0;
+            const count = 0;
             myFn(count, i, j);
         }
     }
 
     const max = Math.max(...Array.from(set.values()));
     console.log(max);
-
 
 }
 

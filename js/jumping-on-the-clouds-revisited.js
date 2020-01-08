@@ -8,7 +8,7 @@ function jumpingOnClouds(c, k) {
         }
     }
 
-    //if first cloud is is marked 1
+    // if first cloud is is marked 1
     if (c[0] === 1) {
         energyLevel = energyLevel - 2;
     }

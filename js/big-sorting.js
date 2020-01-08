@@ -25,9 +25,7 @@ function bigSorting(unsorted) {
     }
     return unsorted.sort(compareNumbers);
 
-
 }
-
 
 const unsorted = ['31415926535897932384626433837', '31415926535897932384626433836'];
 

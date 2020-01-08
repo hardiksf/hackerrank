@@ -30,7 +30,7 @@ function climbingLeaderboard(scores, alice) {
                 break;
             } else {
                 while (!doneWithThisIndex) {
-                    let midScoreIndex = Math.floor((start + end) / 2);
+                    const midScoreIndex = Math.floor((start + end) / 2);
                     const scoreAtMidScoreIndex = uniqueScores[midScoreIndex];
                     if (scoreAtMidScoreIndex === aliceCurrentScore) {
                         result.push(midScoreIndex + 1);
@@ -48,9 +48,8 @@ function climbingLeaderboard(scores, alice) {
                             break;
                         } else {
                             end = end - midScoreIndex;
-                        }
-                    } else // (scoreAtMidScoreIndex > aliceCurrentScore)
-                    {
+                        }// (scoreAtMidScoreIndex > aliceCurrentScore)
+                    } else {
                         if (uniqueScores[midScoreIndex + 1] === aliceCurrentScore) {
                             result.push(midScoreIndex);
                             doneWithThisIndex = true;
@@ -74,7 +73,9 @@ function climbingLeaderboard(scores, alice) {
 
 const scores = [100, 100, 50, 40, 40, 20, 10];
 const alice = [5, 25, 50, 120];
-// const alice = [50];
-// const scores = [18, 16, 14, 12, 10, 8];
-// const alice = [8];
+/*
+ * const alice = [50];
+ * const scores = [18, 16, 14, 12, 10, 8];
+ * const alice = [8];
+ */
 console.log(climbingLeaderboard(scores, alice));

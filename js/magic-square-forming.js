@@ -1,10 +1,10 @@
 // Generating all possible magic squares
 function getMagicSquare() {
 
-    let myArray = [
+    const myArray = [
         [4, 9, 2],
         [3, 5, 7],
-        [8, 1, 5]
+        [8, 1, 5],
     ];
 
     for (let index1 = 1; index1 < 10; index1++) {
@@ -15,11 +15,18 @@ function getMagicSquare() {
                         for (let index6 = 1; index6 < 10; index6++) {
                             for (let index7 = 1; index7 < 10; index7++) {
                                 for (let index8 = 1; index8 < 10; index8++) {
-                                    for (let index9 = 1; index9 < 10; index9++)
+                                    for (let index9 = 1; index9 < 10; index9++) {
                                     // if numbers are not distinct for each loop, I can break the loop and make it a bit faster
-                                    {
+                                    
                                         const mySet = new Set();
-                                        mySet.add(index1).add(index2).add(index3).add(index4).add(index5).add(index6).add(index7).add(index8).add(index9)
+                                        mySet.add(index1).add(index2)
+                                            .add(index3)
+                                            .add(index4)
+                                            .add(index5)
+                                            .add(index6)
+                                            .add(index7)
+                                            .add(index8)
+                                            .add(index9);
                                         if ((mySet.size === 9))
                                             if (
                                                 (index1 + index2 + index3 === index4 + index5 + index6) &&
@@ -58,9 +65,8 @@ function getMagicSquare() {
 s = [
     [4, 9, 2],
     [3, 5, 7],
-    [8, 1, 5]
+    [8, 1, 5],
 ];
-
 
 function formingMagicSquare(s) {
 
@@ -69,43 +75,43 @@ function formingMagicSquare(s) {
         [
             [2, 7, 6],
             [9, 5, 1],
-            [4, 3, 8]
+            [4, 3, 8],
         ],
         [
             [2, 9, 4],
             [7, 5, 3],
-            [6, 1, 8]
+            [6, 1, 8],
         ],
         [
             [4, 3, 8],
             [9, 5, 1],
-            [2, 7, 6]
+            [2, 7, 6],
         ],
         [
             [4, 9, 2],
             [3, 5, 7],
-            [8, 1, 6]
+            [8, 1, 6],
         ],
         [
             [6, 1, 8],
             [7, 5, 3],
-            [2, 9, 4]
+            [2, 9, 4],
         ],
         [
             [6, 7, 2],
             [1, 5, 9],
-            [8, 3, 4]
+            [8, 3, 4],
         ],
         [
             [8, 1, 6],
             [3, 5, 7],
-            [4, 9, 2]
+            [4, 9, 2],
         ],
         [
             [8, 3, 4],
             [1, 5, 9],
-            [6, 7, 2]
-        ]
+            [6, 7, 2],
+        ],
     ];
 
     let result = Number.MAX_SAFE_INTEGER;

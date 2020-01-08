@@ -2,7 +2,7 @@ function consecutiveAlternate(s) {
 
     let max = 0;
     let counter = 0;
-    let myString = "";
+    let myString = '';
     let doesStringHasAlternativeCharacter = false;
     for (let i = 97; i < 122; i++) {
         if (s.includes(String.fromCharCode(i)) && s.includes(String.fromCharCode(i + 1))) {
@@ -14,8 +14,8 @@ function consecutiveAlternate(s) {
             }
             if (myString.length > 1) {
                 {
-                    let evenCharacterString = "";
-                    let oddCharacterSting = "";
+                    let evenCharacterString = '';
+                    let oddCharacterSting = '';
 
                     for (let index = 0; index < myString.length; index++) {
                         if (index % 2 === 0) {
@@ -40,9 +40,9 @@ function consecutiveAlternate(s) {
             }
             counter = 0;
             doesStringHasAlternativeCharacter = false;
-            myString = "";
+            myString = '';
         }
     }
     return max;
 }
-consecutiveAlternate("pvmaigytciycvjdhovwiouxxylkxjjyzrcdrbmokyqvsradegswrezhtdyrsyhg");
+consecutiveAlternate('pvmaigytciycvjdhovwiouxxylkxjjyzrcdrbmokyqvsradegswrezhtdyrsyhg');

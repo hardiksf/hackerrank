@@ -8,6 +8,6 @@ function alternatingCharacters(s) {
     }
     return counter;
 }
-const s = "ABABABAB";
+const s = 'ABABABAB';
 
 console.log(alternatingCharacters(s));

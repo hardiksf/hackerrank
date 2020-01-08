@@ -1,7 +1,7 @@
 function circularArrayRotation(a, k, queries) {
     const aLength = a.length;
     k = k % aLength;
-    const rotatedArray = [];
+    let rotatedArray = [];
     if (k !== a.length) {
         for (let i = 0; i < aLength; i++) {
             const elementIndexToBePushed = aLength - k + i;
@@ -23,10 +23,12 @@ function circularArrayRotation(a, k, queries) {
     return result;
 }
 
-let a = [3, 4, 5];
-// 5, 3, 4
-//4, 5, 3
-let k = 40;
-let queries = [1, 2];
+const a = [3, 4, 5];
+/*
+ *  5, 3, 4
+ * 4, 5, 3
+ */
+const k = 40;
+const queries = [1, 2];
 
 circularArrayRotation(a, k, queries);

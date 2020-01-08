@@ -4,7 +4,7 @@ function timeInWords(h, m) {
     let minuteToText = numToText(m);
 
     if (m === 0) {
-        result = `${hourToText} o' clock`
+        result = `${hourToText} o' clock`;
     } else if (m === 1) {
         result = `one minute past ${hourToText}`;
     } else if (m <= 31) {

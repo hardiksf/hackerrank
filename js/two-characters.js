@@ -2,9 +2,9 @@ function consecutiveAlternate(s) {
 
     let max = 0;
     let counter = 0;
-    let myString = "";
+    let myString = '';
     let doesStringHasAlternativeCharacter = false;
-    let uniqueCharacters = "";
+    let uniqueCharacters = '';
 
     for (const character of s) {
         if (!uniqueCharacters.includes(character)) {
@@ -24,8 +24,8 @@ function consecutiveAlternate(s) {
                 }
                 if (myString.length > 1) {
                     {
-                        let evenCharacterString = "";
-                        let oddCharacterSting = "";
+                        let evenCharacterString = '';
+                        let oddCharacterSting = '';
 
                         for (let index = 0; index < myString.length; index++) {
                             if (index % 2 === 0) {
@@ -51,9 +51,9 @@ function consecutiveAlternate(s) {
                 }
                 counter = 0;
                 doesStringHasAlternativeCharacter = false;
-                myString = "";
+                myString = '';
             }
-            myString = "";
+            myString = '';
         }
 
     }
@@ -61,8 +61,10 @@ function consecutiveAlternate(s) {
 
     return max;
 }
-//result - 6
-consecutiveAlternate("pvmaigytciycvjdhovwiouxxylkxjjyzrcdrbmokyqvsradegswrezhtdyrsyhg");
+// result - 6
+consecutiveAlternate('pvmaigytciycvjdhovwiouxxylkxjjyzrcdrbmokyqvsradegswrezhtdyrsyhg');
 
-//test case 19 - 6 is the result
-// consecutiveAlternate("czoczkotespkfjnkbgpfnmtgqhorrzdppcebyybhlcsplqcqogqaszjgorlsrppinhgpaweydclepyftywafupqsjrbkqakpy");
+/*
+ * test case 19 - 6 is the result
+ *  consecutiveAlternate("czoczkotespkfjnkbgpfnmtgqhorrzdppcebyybhlcsplqcqogqaszjgorlsrppinhgpaweydclepyftywafupqsjrbkqakpy");
+ */

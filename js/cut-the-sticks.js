@@ -1,6 +1,6 @@
 function cutTheSticks(arr) {
     arr.sort();
-    const result = [arr.length]
+    const result = [arr.length];
     console.log(arr.length);
     let min = arr[0];
     for (let index = 0; index < arr.length; index++) {
@@ -12,14 +12,6 @@ function cutTheSticks(arr) {
     }
     return result;
 }
-
-
-
-
-
-
-
-
 
 const myArray = [5, 4, 4, 2, 2, 8];
 (cutTheSticks(myArray));

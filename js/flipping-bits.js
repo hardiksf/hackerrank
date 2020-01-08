@@ -6,12 +6,12 @@ function flippingBits(N) {
         binaryNumber = '0'.repeat(difference) + binaryNumber;
     }
 
-    let flippedBinaryNumber = [];
+    const flippedBinaryNumber = [];
     for (const character of binaryNumber) {
         character === '0' ? flippedBinaryNumber.push(`1`) : flippedBinaryNumber.push(`0`);
     }
 
-    return parseInt(flippedBinaryNumber.join(""), 2);
+    return parseInt(flippedBinaryNumber.join(''), 2);
 
 }
 

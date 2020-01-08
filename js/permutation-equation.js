@@ -1,5 +1,5 @@
 function permutationEquation(p) {
-    const min = Math.min(...p)
+    const min = Math.min(...p);
     const result = [];
     for (let i = min; i <= p.length; i++) {
         result.push(p.indexOf(p.indexOf(i) + 1) + 1);

@@ -1,9 +1,9 @@
 function happyLadybugs(b) {
     let result = `YES`;
 
-    //if not at least two of each - NO
+    // if not at least two of each - NO
     const bCharArray = b.split('');
-    let map = new Map();
+    const map = new Map();
 
     for (let index = 0; index < bCharArray.length; index++) {
         if ((b[index]) !== `_`) {
@@ -15,7 +15,7 @@ function happyLadybugs(b) {
         }
     }
 
-    let mapIterator = map.values();
+    const mapIterator = map.values();
     for (let index = 0; index < map.size; index++) {
         if (mapIterator.next().value < 2) {
             result = `NO`;
@@ -23,7 +23,7 @@ function happyLadybugs(b) {
         }
     }
 
-    //If does not include _ and not next to each other - NO
+    // If does not include _ and not next to each other - NO
     if (!b.includes(`_`)) {
         for (let index = 1; index < b.length - 1; index++) {
             if (b[index] !== b[index - 1] && b[index] !== b[index + 1]) {

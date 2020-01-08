@@ -1,4 +1,4 @@
-//This failes due to timeout
+// This failes due to timeout
 function squares(a, b) {
     let count = 0;
     for (let num = a; num <= b; num++) {
@@ -9,7 +9,7 @@ function squares(a, b) {
     return count;
 }
 
-//This is is faster
+// This is is faster
 function squares(a, b) {
     let count = 0;
     let sqrtFloorOfA = Math.floor(Math.sqrt(a));

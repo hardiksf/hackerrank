@@ -1,4 +1,4 @@
-//Balanced brackets
+// Balanced brackets
 function isBalanced(s) {
     let length = -1;
     while (s.length !== length) {
@@ -8,12 +8,11 @@ function isBalanced(s) {
         s = s.replace('()', '');
     }
     if (s.length === 0) {
-        return "YES";
+        return 'YES';
     } else {
-        return "NO";
+        return 'NO';
     }
 }
 
-
-s = "{[(])}";
+s = '{[(])}';
 console.log(isBalanced(s));

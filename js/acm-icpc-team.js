@@ -11,7 +11,7 @@ function acmTeam(topic) {
         for (let j = i + 1; j < numberOfParticipants; j++) {
             totalNumberOfTopicKnownByThisTeam = 0;
             for (let k = 0; k < numberOfTopics; k++) {
-                if (topic[i][k] === "1" || topic[j][k] === "1") {
+                if (topic[i][k] === '1' || topic[j][k] === '1') {
                     totalNumberOfTopicKnownByThisTeam = totalNumberOfTopicKnownByThisTeam + 1;
                 }
             }

@@ -1,5 +1,5 @@
 function encryption(s) {
-    //remove all spaces
+    // remove all spaces
     const stringWithoutSpaces = s.replace(/ /g, ``);
 
     const length = stringWithoutSpaces.length;
@@ -7,7 +7,7 @@ function encryption(s) {
     const columns = Math.ceil(Math.sqrt(length));
 
     if (rows * columns < length) {
-        rows = columns
+        rows = columns;
     }
 
     let result = ``;
@@ -24,6 +24,6 @@ function encryption(s) {
     }
     console.log(result);
 }
-const s = "feed thed og";
-//fto ehg ee dd
+const s = 'feed thed og';
+// fto ehg ee dd
 encryption(s);

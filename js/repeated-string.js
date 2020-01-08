@@ -6,12 +6,9 @@ function repeatedString(s, n) {
 
     const sub = s.substring(0, reminder);
     const numberOfTimesAInSubString = sub.split('').filter(element => element === 'a').length;
-    count = numberOfTimesAInSubString
-
-
+    count = numberOfTimesAInSubString;
 
     console.log(`sub`, sub);
-
 
     if (n > stringLength) {
         const numberOfCompleteString = Math.floor(n / stringLength);
@@ -26,9 +23,6 @@ function repeatedString(s, n) {
 
     return count;
 
-
-
-
 }
 
-repeatedString("abc", 1);
+repeatedString('abc', 1);

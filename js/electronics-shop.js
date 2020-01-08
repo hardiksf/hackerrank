@@ -39,9 +39,11 @@ function getMoneySpent(keyboards, drives, b) {
     return result;
 }
 
-//10 2 3
-// 3 1
-// 5 2 8
+/*
+ * 10 2 3
+ *  3 1
+ *  5 2 8
+ */
 
 keyboards = [3, 1];
 drives = [5, 2, 8];

@@ -1,8 +1,8 @@
 function balancedSums(arr) {
     const length = arr.length;
-    let result = "NO";
+    let result = 'NO';
     if (length === 1) {
-        result = "YES";
+        result = 'YES';
     }
 
     if (length > 2) {
@@ -20,7 +20,7 @@ function balancedSums(arr) {
                 rightSum = rightSum + arr[indexOfNextElementToBeBeAddedToRightSum];
                 indexOfNextElementToBeBeAddedToRightSum--;
             } else {
-                //sum is same, add the lowest from  left and right
+                // sum is same, add the lowest from  left and right
                 if (rightSum === leftSum) {
                     if (arr[indexOfNextElementToBeBeAddedToLeftSum] < arr[indexOfNextElementToBeBeAddedToRightSum]) {
                         leftSum = leftSum + arr[indexOfNextElementToBeBeAddedToLeftSum];
@@ -35,7 +35,7 @@ function balancedSums(arr) {
             remainingElementsToCheck--;
         }
         if (rightSum === leftSum) {
-            result = "YES";
+            result = 'YES';
         }
     }
     return result;

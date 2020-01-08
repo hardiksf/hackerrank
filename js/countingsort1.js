@@ -1,5 +1,5 @@
 function countingSort(arr) {
-    let result = [];
+    const result = [];
     for (let index = 0; index < 100; index++) {
         result[index] = 0;
     }

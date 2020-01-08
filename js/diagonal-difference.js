@@ -8,6 +8,6 @@ function diagonalDifference(arr) {
     }
 
     const difference = sumLeftToRight - sumRightToLeft;
-    return Math.abs(difference)
+    return Math.abs(difference);
 
 }

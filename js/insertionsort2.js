@@ -5,7 +5,7 @@ function insertionSort2(n, arr) {
             [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
             j--;
         }
-        console.log(...arr)
+        console.log(...arr);
     }
 }
 

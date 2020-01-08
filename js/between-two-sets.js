@@ -7,8 +7,8 @@ function getTotalX(a, b) {
 
     for (let index = maxInA; index <= minInB; index = index + maxInA) {
         for (let i = 0; i < a.length; i++) {
-            if (index % a[i] !== 0) {;
-                isNumberGoodInA = false
+            if (index % a[i] !== 0) {
+                isNumberGoodInA = false;
                 break;
             } else {
                 isNumberGoodInA = true;
