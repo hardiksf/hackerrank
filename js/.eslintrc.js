@@ -58,5 +58,7 @@ module.exports = {
         quotes: ['error', 'single', { 'allowTemplateLiterals': true }],
 
         'no-new-object': 'error',
+
+        'eol-last': ['error', 'always'], // this rule enforces at least one newline (or absence thereof) at the end of non-empty files.
     },
 };
